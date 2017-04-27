@@ -38,8 +38,23 @@ var render = function(vertices) {
         fogHex, fogDensity, parameters = {},
         parameterCount, particles;
 
+    // clearScene();
     init();
     animate();
+
+    // function clearScene () {
+    //     if (scene != null) {
+    //     var elementsInTheScene = scene.children.length;
+    //
+    //     for ( var i = elementsInTheScene-1; i > 0; i-- ) {
+    //         if ( scene.children [ i ].name != 'camera' &&
+    //              scene.children [ i ].name != 'ambientLight' &&
+    //              scene.children [ i ].name != 'directionalLight') {
+    //             scene.remove ( scene.children [ i ] );
+    //             }
+    //         }
+    //     }
+    // }
 
     function init() {
         windowHalfX = WIDTH / 2;

@@ -21,6 +21,14 @@
             }
         </style>
         <script>
+          function clear_scene() {
+              const canvas =
+                  document.querySelector('#canvas_container');
+
+            while (canvas.firstChild) {
+                canvas.removeChild(canvas.firstChild);
+            }
+          }
           function abortRead() {
             reader.abort();
           }
@@ -65,7 +73,6 @@
                       vertices.push(p1);
                       vertices.push(p2);
                       vertices.push(p3);
-                      console.log(p1, p2, p3);
                   }
               }
 
@@ -85,8 +92,6 @@
                       vertices.push(p2);
                       vertices.push(p3);
                   }
-
-                  console.log(p1, p2, p3);
               }
 
               float32vertices = new Float32Array(vertices);
@@ -122,6 +127,7 @@
                   var vertices = processKITTIBinData(result);
               }
 
+              clear_scene();
               render(vertices);
             }
 
