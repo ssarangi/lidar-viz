@@ -66,6 +66,9 @@
               console.log("Array length " + (allTextLines.length - 1) * 3)
               for (var i=0; i<allTextLines.length; i++) {
                   var data = allTextLines[i].split(' ');
+                  if (data.length == 1) {
+                      data = allTextLines[i].split(',');
+                  }
                   var p1 = parseFloat(data[0]);
                   var p2 = parseFloat(data[1]);
                   var p3 = parseFloat(data[2]);
